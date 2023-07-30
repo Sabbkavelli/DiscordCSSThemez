@@ -1,16 +1,16 @@
-/**
- * @name Nature
- * @author ClearVision Team
- * @version 6.3.0
- * @description Highly customizable and beautiful theme for BetterDiscord.
- * @source https://github.com/ClearVision/ClearVision-v6
- * @website https://clearvision.github.io
- * @invite 7pNUC9C
- * @BDEditor Clear Vision
-*/
+/* ==UserStyle==
+@name           MadreselvaCSS
+@namespace      discord.com
+@version        .1
+@description    Madreselva sabrosos yamiyami
+@author         Sabbkavelli
+@license        GNU
+==/UserStyle== */
 
+@-moz-document domain("discord.com") {
+    
 @import url('https://clearvision.github.io/ClearVision-v6/main.css');
-
+    
 :root {
   --main-color: #009688;
   --hover-color: #FF6599;
@@ -85,7 +85,4 @@
   --bd-blue-hover: var(--hover-color);
   --bd-blue-active: var(--hover-color);
 }
-
-/* Any custom CSS below here */
-
-
+}
