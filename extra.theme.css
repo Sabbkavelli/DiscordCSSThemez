@@ -1,0 +1,126 @@
+/*Channel color change*/
+    .modeUnread-3Cxepe .name-28HaxV,
+    .modeUnread-3Cxepe:hover .name-28HaxV {
+        color: #298fa3;
+        font-weight: var(--font-weight-semibold-1x-light-theme, 500);
+    }
+
+    .modeConnected-NrO4cP .name-28HaxV,
+    .modeConnected-NrO4cP:hover .name-28HaxV,
+    .modeSelected-3DmyhH .name-28HaxV,
+    .modeSelected-3DmyhH:hover .name-28HaxV {
+        color: #52c9e0;
+        font-weight: var(--font-weight-semibold-1x-light-theme, 500);
+    }
+    
+    /*Colorful More Options */
+
+    #message-actions-pin,
+    #message-pin,
+    #message-unpin {
+        color: skyblue;
+    }
+    #message-actions-pin:hover,
+    #message-pin:hover,
+    #message-unpin:hover {
+        background-color: #67a7c0;
+        color: #fff;
+    }
+    #message-actions-reply,
+    #message-reply {
+        color: khaki;
+    }
+    #message-actions-reply:hover,
+    #message-reply:hover {
+        background-color: #c5bb5d;
+        color: #fff;
+    }
+    #message-actions-thread,
+    #message-thread {
+        color: #69c069;
+    }
+    #message-actions-thread:hover,
+    #message-thread:hover {
+        background-color: #5dbd5d;
+        color: #fff;
+    }
+    #message-actions-mark-unread,
+    #message-mark-unread {
+        color: plum;
+    }
+    #message-actions-mark-unread:hover,
+    #message-mark-unread:hover {
+        background-color: #c27ec2;
+        color: #fff;
+    }
+    #message-actions-copy-link,
+    #message-copy-link {
+        color: lightseagreen;
+    }
+    #message-actions-copy-link:hover,
+    #message-copy-link:hover {
+        background-color: #199c96;
+        color: #fff;
+    }
+    #message-actions-tts,
+    #message-tts {
+        color: var(--brand-experiment);
+    }
+    #message-actions-tts:hover,
+    #message-tts:hover {
+        background-color: var(--brand-experiment);
+        color: #fff;
+    }
+    #message-actions-copy-id,
+    #message-devmode-copy-id {
+        color: lightsalmon;
+    }
+    #message-actions-copy-id:hover #message-devmode-copy-id:hover {
+        background-color: lightsalmon;
+        color: #fff;
+    }
+    #message-edit,
+    #message-actions-edit {
+        color: steelblue;
+    }
+    #message-edit:hover,
+    #message-actions-edit:hover {
+        background-color: steelblue;
+        color: #fff;
+    }
+    #message-add-reaction {
+        color: goldenrod;
+    }
+    #message-add-reaction:hover {
+        background-color: goldenrod;
+        color: #fff;
+    }
+    
+    /*Cat sleeping on the message bar*/
+    [class^="channelTextArea"]::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    bottom: calc(100% - 3px); /* Mess with the - 3px to change its vertical position */
+    right: 10px; /* Switch this from right to left to put it on the left side, or increase/decrease to change its position */
+    position: absolute;
+    image-rendering: pixelated;
+    pointer-events: none;
+    background-image: url("https://raw.githubusercontent.com/adryd325/oneko.js/14bab15a755d0e35cd4ae19c931d96d306f99f42/oneko.gif");
+    animation: oneko 1s infinite; /* change 1s to make the animation slower/faster */
+}
+
+@keyframes oneko {
+    /*
+    if you open the background image in ur browser, you will see that it has way more frames
+    so if you want, you could make ur own keyframes for a different animation
+    the top left frame is 0 0, second top row is -32 0, second row second is -32 -32 and so on
+    the ...00001% makes it so that there's no transition between the frames, so if you wanted say 3 frames, you'd do 0%, 33.3%; 33.30001%, 66.6%; 66.60001%, 100%
+    */
+    0%, 50% {
+        background-position: -64px 0;
+    }
+    50.0001%, 100% {
+        background-position: -64px -32px;
+    }
+}
